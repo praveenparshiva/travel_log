@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            background-color: #DCEAFD ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+        .container {
+            background:rgba(255, 255, 255, 0.2);/*opacity*/
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow:5px 5px 25px black;
+            
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+
+            display: flex;
+            margin: 10px 0;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background:  #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: blue;
+        }
+        abbr {
+    display: block;
+    text-align: right;
+}
+    </style>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var UN = /^[A-Z][a-z]+$/; 
+            var Pass = /^[a-z]+[0-9]+$/; 
+            
+            if (UN.test(username) && Pass.test(password)) { 
+                alert("Login successfully");
+                alert("Move to previous page")
+            } 
+            else if (username == "" && password == "") { 
+                alert("Fill the Information");
+            } 
+            else { 
+                alert("Enter valid details");
+            } 
+        }
+    </script>
+</head>
+<body background="C:\Users\prave\Downloads\samurai-mountain-silhouette-desktop-wallpaper-4k.jpg">
+    <div class="container">
+        <h2>Login</h2>
+        <label>User name</label><br>
+        <input type="text" id="username"><br>
+        <label>Password</label><br>
+        <input type="password" id="password"><br>
+        <button type="submit" onclick= validateLogin()>Login</button>
+        <p><abbr title="1. The username must start with a capital letter and contain only letters. 
+  2. The password should contain lowercase letters and numbers. 
+  3. No special characters should be used.">
+    &#8618; Hover</abbr></p>
+    </div>
+</body>
+</html>
