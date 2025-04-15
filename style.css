@@ -115,7 +115,7 @@ nav {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.999s;
+    transition: transform 2s;
   }
   
   .box:hover .box-inner {
